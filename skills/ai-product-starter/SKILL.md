@@ -10,8 +10,11 @@ description: >-
   prototype, or startup; wants to "set up a repo properly" or "kick things off";
   asks for planning docs, a roadmap, an architecture doc, or a backlog; or wants
   a repeatable AI-driven development workflow — even if they never say the word
-  "skill" or name this template. Tool-agnostic: the output works with Claude
-  Code, Cursor, GitHub Copilot, Codex, Gemini, or any AI coding assistant.
+  "skill" or name this template. You do NOT need to be a developer: product
+  managers, founders, and non-coders use it too — it asks step by step what the
+  project is and creates only the docs it actually needs. Tool-agnostic: the
+  output works with Claude Code, Cursor, GitHub Copilot, Codex, Gemini, or any AI
+  coding assistant.
 ---
 
 # AI Product Starter
@@ -22,6 +25,11 @@ planning documents, an operating model, and a git/review/release workflow so tha
 an AI assistant (and the humans steering it) can execute ticket-by-ticket with
 high reliability.
 
+**You don't have to be a developer to use this.** It's as much for product owners
+and founders as for engineers. It asks plain-language questions, and for
+non-coders it still produces the strategy/product/spec docs while scaffolding the
+technical ones as clearly-marked placeholders for a developer or AI to fill later.
+
 The guiding belief: **documents are the source of truth, not the chat history.**
 A teammate — or a fresh AI session, or a different AI tool entirely — should be
 able to open the repo, read a handful of files, and know exactly what is being
@@ -30,11 +38,15 @@ serves that goal.
 
 ## When this applies
 
-Any "I'm starting something new" moment: a consumer app, a SaaS, an internal
-tool, a CLI, a library, a hackathon project. Scale the output to the project (see
-**Adapt to the project** below) — a weekend CLI does not need a pitch deck — but
-the *spine* (operating model + architecture + workflow + backlog) is worth it
-almost every time, because that is what makes AI-driven execution repeatable.
+Any "I'm starting something new" moment — and the user can be **anyone**: a
+founder with a business idea, a product manager shaping a spec, a designer, or an
+engineer. Consumer app, SaaS, internal tool, CLI, library, hackathon project. The
+intake below figures out which docs fit, so a non-technical founder gets a strong
+product/roadmap/spec set without being dragged through engineering minutiae, while
+a developer can go deep on architecture. Scale to the project — a weekend CLI does
+not need a pitch deck — but the *spine* (operating model + workflow + backlog) is
+worth it almost every time, because that is what makes AI-driven execution
+repeatable.
 
 If the user is mid-project and just wants one doc, you can still use the matching
 template here; you do not have to run the whole flow.
@@ -69,32 +81,70 @@ real content and make `CLAUDE.md` a one-line pointer to it. This keeps the repo
 
 ## Process
 
-Work through these in order. Ask questions one at a time; do not dump a
-questionnaire. Confirm each major doc's direction before writing the next — a
-wrong roadmap makes every downstream doc wrong.
+Two phases: **interview to decide what's needed**, then **generate only that.**
+Ask questions ONE AT A TIME, conversationally — never dump a questionnaire. Read
+who you're talking to: if they're not technical, drop the jargon ("does it have
+screens people tap, or does it run in the background?"). Pull answers from the
+conversation first; only ask what's missing.
 
-### 0 — Understand the product
+### 0 — Interview, then choose the files
 
-Before anything, pin down the essentials. Pull what you can from the conversation;
-ask only for what is missing:
+The goal of this step is to end with an agreed **list of files to create — no more,
+no less.** Walk through these one question at a time, skipping any you can already
+answer:
 
-- **What** is it, in one sentence? What is the single job of the v1?
-- **Who** is it for, and what painful problem does it solve for them?
-- **The wedge** — why this will win where alternatives do not (the defensible,
-  specific thing). Vague "better UX" is not a wedge; name the concrete edge.
-- **Platform** — web, mobile, CLI, service? What ships first?
-- **Commercial?** Is there a business model (→ include MONETIZATION/PITCH-DECK),
-  or is it internal/OSS (→ skip them)?
-- **Domain landmines** — the rules that are easy to get wrong (money precision,
-  timezones, billing cycles, compliance). These become a loud section in
-  ARCHITECTURE.md and DATABASE.md, because they are where AI-written code fails.
+1. **What are you building?** One sentence; the single job of v1. *(always)*
+2. **Who is it for, and what problem does it solve?** *(feeds ROADMAP + DESIGN)*
+3. **What's the edge** — why this wins where alternatives don't? Push past "better
+   UX" to a concrete, defensible reason. *(feeds ROADMAP)*
+4. **Will it make money / is it a business?** If so, **raising funding?**
+   *(makes money → MONETIZATION · funding → PITCH-DECK)*
+5. **Does it have a UI** — screens people look at and tap — or does it run headless
+   (CLI, API, automation, library)? *(UI → DESIGN-SYSTEM)*
+6. **Does it store data or have user accounts?** *(yes → DATABASE)*
+7. **Any AI / LLM features?** *(yes → AI)*
+8. **How big is this** — a quick experiment, or something you'll build over weeks
+   or months? *(small → trim to the lean spine)*
+9. **Who's going to build it** — you with an AI assistant, a developer, a team?
+   *(sets how deep the technical docs go — see the persona note below)*
 
-State your understanding back in a few sentences and get a nod before proceeding.
+Don't ask about stack, frameworks, or databases-by-name unless the person is
+technical and wants to decide now. Also surface any **domain landmines** — rules
+easy to get wrong (money precision, timezones, billing cycles, compliance) — which
+become a loud section in ARCHITECTURE/DATABASE, because that's where AI-written
+code fails.
+
+**Map answers to files:**
+
+| If… | Create |
+|---|---|
+| **Always** | `AGENTS.md` · `README.md` · `docs/ROADMAP` · `docs/DESIGN` · `docs/WORKFLOW` · `docs/BACKLOG` |
+| There will be code | + `docs/ARCHITECTURE` |
+| Has a UI | + `docs/DESIGN-SYSTEM` |
+| Stores data / has accounts | + `docs/DATABASE` |
+| Has AI features | + `docs/AI` |
+| Makes money | + `docs/MONETIZATION` |
+| Raising funding | + `docs/PITCH-DECK` |
+| Quick experiment | trim to the lean spine: `AGENTS` + `WORKFLOW` + `BACKLOG` (+ `ROADMAP`/`DESIGN` if useful) |
+
+**Then confirm before writing anything.** Show the proposed file list with a
+one-line reason for each and ask: "this is what I'll create — add or drop any?"
+Creating files nobody needs is the main failure mode; this checkpoint prevents it.
+
+**Persona note — tailor depth to who's building:**
+- *Product owner / founder / non-coder:* lead with ROADMAP, DESIGN, and (if
+  commercial) MONETIZATION / PITCH-DECK. Still create ARCHITECTURE / DATABASE / AI
+  if relevant, but as **plain-language scaffolds with `TBD — for your developer/AI`
+  placeholders**, not deep technical decisions. Never block them on a stack choice.
+- *Engineer / solo builder:* go deeper — lock the stack and technical docs now
+  (Step 1).
 
 ### 1 — Lock the foundational decisions
 
-These propagate everywhere, so decide them once, explicitly, and record them in
-WORKFLOW.md under "Locked decisions":
+These propagate everywhere, so decide them once and record them in WORKFLOW.md
+under "Locked decisions". **With a non-technical owner, don't interrogate them —
+propose sensible defaults, mark them provisional, and leave genuinely open ones as
+`TBD` for whoever builds it.** Decide:
 
 - **Stack** (language, framework, DB) and **package manager**.
 - **Repo structure** — single package or **monorepo**? Decide deliberately: if a

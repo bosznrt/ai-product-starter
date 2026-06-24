@@ -1,12 +1,19 @@
 # AI Product Starter
 
-> Give your coding agent the discipline to **plan before it codes.**
+> Give your agent the discipline to **plan before it codes** — for product folks
+> and developers alike.
 
 A small, tool-agnostic plugin with one skill: when you're starting a new product,
-your AI assistant steps back, interviews you, and lays down a complete planning
-foundation **before** writing any code — so AI-driven execution is repeatable and
-a fresh session (or a teammate, or a different AI tool) can pick up where you left
-off just by reading the repo.
+your AI assistant steps back, **interviews you one question at a time**, and lays
+down a planning foundation **before** writing any code — so AI-driven execution is
+repeatable and a fresh session (or a teammate, or a different AI tool) can pick up
+where you left off just by reading the repo.
+
+**You don't need to be a developer.** The intake adapts to who you are and what
+you're building, and **only creates the files your project actually needs** — a
+non-technical founder gets product, roadmap, and spec docs (and a pitch deck if
+they're raising); an engineer can go deep on architecture and data model. No
+ceremonial docs nobody reads.
 
 It's the generalized, reusable version of the setup behind a real product build —
 not a toy template.
