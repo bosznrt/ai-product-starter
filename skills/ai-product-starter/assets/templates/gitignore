@@ -1,0 +1,35 @@
+# TEMPLATE: write this into the new repo as `.gitignore` (it ships here as
+# `gitignore`, without the dot, so it doesn't take effect inside this template repo).
+# This is a stack-agnostic starter — tailor it to your actual stack.
+
+# Dependencies
+node_modules/
+.venv/
+vendor/
+
+# Build output
+dist/
+build/
+out/
+*.tsbuildinfo
+
+# Env & secrets — never commit these
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Test / coverage
+coverage/
+
+# Tooling caches
+.turbo/
+.cache/

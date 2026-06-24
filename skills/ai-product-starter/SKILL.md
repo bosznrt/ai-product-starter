@@ -105,7 +105,9 @@ answer:
 5. **Does it have a UI** — screens people look at and tap — or does it run headless
    (CLI, API, automation, library)? *(UI → DESIGN-SYSTEM)*
 6. **Does it store data or have user accounts?** *(yes → DATABASE)*
-7. **Any AI / LLM features?** *(yes → AI)*
+7. **Any AI / LLM features?** — does the *product itself* use AI/LLM at runtime?
+   *(yes → AI · note: building it **with** an AI assistant does NOT count as an AI
+   feature — don't create `AI.md` for that, and don't leave a dangling link to it)*
 8. **How big is this** — a quick experiment, or something you'll build over weeks
    or months? *(small → trim to the lean spine)*
 9. **Who's going to build it** — you with an AI assistant, a developer, a team?
@@ -297,16 +299,21 @@ Initialize and make the planning the first commit, so the project's history
 starts from an agreed plan:
 
 ```bash
-git init
-# write all docs + AGENTS.md + CLAUDE.md + README + .github/
+git init -b main
+# write all docs + AGENTS.md + CLAUDE.md + README + .github/ + a .gitignore
+# (start from assets/templates/gitignore; tailor it to the stack)
 git add -A && git commit -m "chore: planning foundation (docs + workflow + operating model)"
 git branch staging        # integration branch; main = production
+git checkout staging      # work on staging day-to-day
 ```
 
-Then (with the human's go-ahead) create the remote and push both branches. Set
-the default branch to `staging` so day-to-day PRs target it and `main` only
-advances on releases. If the repo holds sensitive commercial numbers
-(MONETIZATION/PITCH-DECK), make it **private**.
+Always include a **`.gitignore`** (start from `assets/templates/gitignore`, tailor
+to the stack) — the build path assumes one exists. Then, with the human's go-ahead,
+create the remote and push both branches. **"Default branch" is a host setting**,
+so set it *after* the remote exists — e.g. `gh repo edit --default-branch staging`
+— so PRs target `staging` and `main` only advances on releases (before a remote
+exists, just keep `staging` checked out locally). If the repo holds sensitive
+commercial numbers (MONETIZATION/PITCH-DECK), make it **private**.
 
 ## Adapt to the project
 
