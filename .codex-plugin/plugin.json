@@ -1,0 +1,40 @@
+{
+  "name": "ai-product-starter",
+  "version": "0.1.0",
+  "description": "Bootstrap a new AI-driven product repo before any code: planning docs, operating model, TDD git/PR/AI-review/release workflow, and a phased backlog.",
+  "author": {
+    "name": "BoSz Narathip",
+    "email": "narathip.bosz@gmail.com",
+    "url": "https://github.com/bosznrt"
+  },
+  "homepage": "https://github.com/bosznrt/ai-product-starter",
+  "repository": "https://github.com/bosznrt/ai-product-starter",
+  "license": "MIT",
+  "keywords": [
+    "kickoff",
+    "planning",
+    "backlog",
+    "tdd",
+    "workflow",
+    "ai-driven",
+    "product"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "AI Product Starter",
+    "shortDescription": "Plan a new product repo before any code — docs, workflow, backlog.",
+    "longDescription": "Use AI Product Starter when kicking off a new app, product, MVP, or side-project. It interviews you about the product, then generates planning docs (roadmap, design, architecture, data model, AI strategy, optionally monetization), an operating model, a TDD git/PR/AI-review/release workflow, and a phased execution backlog — so AI-driven execution is repeatable.",
+    "developerName": "BoSz Narathip",
+    "category": "Coding",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "I've got an idea for a new app I want to build.",
+      "Help me set up a new repo properly before we start coding."
+    ],
+    "websiteURL": "https://github.com/bosznrt/ai-product-starter"
+  }
+}

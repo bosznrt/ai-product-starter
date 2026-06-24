@@ -1,0 +1,23 @@
+{
+  "name": "ai-product-starter",
+  "displayName": "AI Product Starter",
+  "description": "Bootstrap a new AI-driven product repo: planning docs, operating model, TDD git/PR/AI-review/release workflow, and a phased backlog.",
+  "version": "0.1.0",
+  "author": {
+    "name": "BoSz Narathip",
+    "email": "narathip.bosz@gmail.com"
+  },
+  "homepage": "https://github.com/bosznrt/ai-product-starter",
+  "repository": "https://github.com/bosznrt/ai-product-starter",
+  "license": "MIT",
+  "keywords": [
+    "skills",
+    "kickoff",
+    "planning",
+    "backlog",
+    "tdd",
+    "workflow",
+    "ai-driven"
+  ],
+  "skills": "./skills/"
+}
