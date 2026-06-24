@@ -15,6 +15,11 @@ non-technical founder gets product, roadmap, and spec docs (and a pitch deck if
 they're raising); an engineer can go deep on architecture and data model. No
 ceremonial docs nobody reads.
 
+It also **stops where it makes sense**: a planning hand-off ends at the docs (plus
+a short build brief you can hand to a developer or AI later), while a build-it-now
+project continues into a working repo, a git/PR/review workflow, and test-first
+execution.
+
 It's the generalized, reusable version of the setup behind a real product build —
 not a toy template.
 

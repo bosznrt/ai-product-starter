@@ -29,6 +29,8 @@ high reliability.
 and founders as for engineers. It asks plain-language questions, and for
 non-coders it still produces the strategy/product/spec docs while scaffolding the
 technical ones as clearly-marked placeholders for a developer or AI to fill later.
+It also knows when to stop: a planning hand-off ends at the docs, while a
+build-it-now project continues into the repo, workflow, and tests.
 
 The guiding belief: **documents are the source of truth, not the chat history.**
 A teammate — or a fresh AI session, or a different AI tool entirely — should be
@@ -118,7 +120,8 @@ code fails.
 
 | If… | Create |
 |---|---|
-| **Always** | `AGENTS.md` · `README.md` · `docs/ROADMAP` · `docs/DESIGN` · `docs/WORKFLOW` · `docs/BACKLOG` |
+| **Always** | `AGENTS.md` (build brief) · `README.md` · `docs/ROADMAP` · `docs/DESIGN` · `docs/BACKLOG` |
+| **Building it now** (not just planning) | + `docs/WORKFLOW` (git/TDD/review) · `.github/` PR template + AI-review · repo bootstrap |
 | There will be code | + `docs/ARCHITECTURE` |
 | Has a UI | + `docs/DESIGN-SYSTEM` |
 | Stores data / has accounts | + `docs/DATABASE` |
@@ -197,6 +200,36 @@ guidance, keep the structure. Do not paste a template verbatim; it must describe
 *this* product. Order: ROADMAP → DESIGN → ARCHITECTURE → DATABASE → AI →
 (DESIGN-SYSTEM if UI) → (MONETIZATION/PITCH-DECK if commercial) → WORKFLOW →
 BACKLOG. WORKFLOW and BACKLOG come last because they reference everything above.
+
+---
+
+**Two finish lines** — what's next depends on who's building (Step 0, Q9):
+
+- **Planning only / handing it to a developer or AI later** (typical for a product
+  owner or founder): you're essentially **done at the docs.** Don't impose coding
+  machinery on someone who isn't coding — skip the git/TDD/release workflow and the
+  repo bootstrap. See *Finish — plan path* just below.
+- **Building it now** (you with an AI, or a developer/team): continue through Steps
+  4–7 to set up the operating model, workflow, and repo.
+
+### Finish — plan path (planning only)
+
+The deliverable *is* the docs — a coherent plan someone can act on. Make them hang
+together (README ties them; ROADMAP and BACKLOG agree on what ships when), and add
+one bridge artifact so the build can start later without you in the room:
+
+- a short **`AGENTS.md`** (or a README section) — the "build brief": a paragraph on
+  the product plus the operating model in miniature (PO + AI/dev implementer +
+  human-merge gate), so whoever builds it inherits how the work should run;
+- the **BACKLOG** as a feature/milestone plan — the PR/release-tracking columns
+  stay blank until building starts.
+
+Then stop and offer the next move: *"When you're ready to build, come back and I'll
+set up the repo, the dev workflow, and the first tickets — or hand `AGENTS.md` +
+`BACKLOG.md` to your developer or AI builder."* Where the docs live is their call
+(a repo, a folder, Notion/Drive); only `git init` if they want version control.
+
+**Build path (Steps 4–7) — only when building now.**
 
 ### 4 — Operating model + AGENTS.md
 
