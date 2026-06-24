@@ -157,7 +157,38 @@ propose sensible defaults, mark them provisional, and leave genuinely open ones 
 - **Auth, testing tools, deployment target.**
 - **AI usage** — which model(s), where AI runs, how failures degrade. → AI.md.
 
-### 2 — Generate the docs
+### 2 — Scope the idea: features, timeline, tools, budget
+
+This is where the docs get their substance — and where you add the most value.
+Don't just collect answers; **propose and estimate.** Founders often don't know
+their feature list, timeline, or costs, so lead with a concrete suggestion drawn
+from what they've told you, then let them adjust. Always label numbers as rough.
+
+Work through four things — for each, offer a draft first, then refine:
+
+- **Features.** Draft the v1 feature set from the problem, split into *must-have
+  for v1* vs *later*. "Based on this, a lean v1 is X, Y, Z; A and B can wait —
+  right?" → feeds ROADMAP's feature list, DESIGN's user stories, and the first
+  BACKLOG tickets. Apply YAGNI hard: a shorter v1 ships.
+- **Timeline.** Get a target (a weekend? a few weeks? months?), then translate it
+  into **phases with rough durations** (e.g. "P1 core ~3 wks → P2 polish ~2 wks").
+  If they have no number, propose a realistic phasing and sanity-check it against
+  the feature list. → ROADMAP phases.
+- **Tools & services.** List what it takes to build *and run*: hosting, database,
+  auth, payments, AI/LLM APIs, email/SMS, analytics, domain. Propose a concrete
+  set fit to the project (and the chosen stack, if any). → ARCHITECTURE + AI.
+- **Budget.** From the tools list, estimate **recurring** (monthly infra + API +
+  subscriptions) and **one-time** costs as ranges, with the assumptions behind them
+  (expected scale). Flag where **AI usage is the swing cost** and how to keep it
+  down. For commercial projects extend to unit economics / COGS / a rough runway →
+  MONETIZATION. For non-commercial, still capture a short **"Tools & running
+  costs"** estimate (in ARCHITECTURE) — people underestimate it.
+
+Summarize it back compactly — *features → phases/timeline → tools → monthly +
+one-time cost range* — and get a thumbs-up. This summary becomes the backbone of
+ROADMAP and the budget content, so the docs come out specific, not generic.
+
+### 3 — Generate the docs
 
 For each relevant doc, read the matching template in
 `assets/templates/docs/<NAME>.md`, then fill it for THIS product. Templates are
@@ -167,7 +198,7 @@ guidance, keep the structure. Do not paste a template verbatim; it must describe
 (DESIGN-SYSTEM if UI) → (MONETIZATION/PITCH-DECK if commercial) → WORKFLOW →
 BACKLOG. WORKFLOW and BACKLOG come last because they reference everything above.
 
-### 3 — Operating model + AGENTS.md
+### 4 — Operating model + AGENTS.md
 
 Write `AGENTS.md` (the spine) from `assets/templates/AGENTS.md`, then `CLAUDE.md`
 from `assets/templates/CLAUDE.md` (a pointer). The operating model — detailed in
@@ -185,7 +216,7 @@ change through independent review, and makes the AI's role legible. Even a solo
 builder benefits — the "orchestrator vs implementer" separation produces smaller,
 reviewable changes.
 
-### 4 — Git, review & release workflow
+### 5 — Git, review & release workflow
 
 Write WORKFLOW.md from the template and set up `.github/pull_request_template.md`.
 The model (detail in `references/git-workflow.md`):
@@ -204,7 +235,7 @@ The non-negotiable gates:
   releases to production. After a human merges, they tell the AI, which updates
   the backlog status.
 
-### 5 — Execution backlog + TDD
+### 6 — Execution backlog + TDD
 
 Write BACKLOG.md from the template: one table per phase that doubles as release
 tracking (status · ID · ticket detail · dependencies · PR · prod version). This
@@ -216,7 +247,7 @@ modules — money, billing, aggregation, anything irreversible — get exhaustiv
 edge coverage; UI gets lighter coverage). Explain *why* (reliability), so the AI
 treats it as a principle rather than a checkbox.
 
-### 6 — Bootstrap the repository
+### 7 — Bootstrap the repository
 
 Initialize and make the planning the first commit, so the project's history
 starts from an agreed plan:
