@@ -1,4 +1,4 @@
-# Example AI-review workflow (Claude). Tool-agnostic: delete this and wire Copilot/Codex instead if you prefer — see the repo's references/ai-review-integrations.md. Triggered by commenting '@claude review' on a PR.
+# Example AI-review workflow (Claude). Tool-agnostic: delete this and wire Copilot or Codex instead if you prefer. Triggered by commenting '@claude review' on a PR.
 name: Claude Code
 
 on:

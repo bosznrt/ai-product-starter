@@ -1,20 +1,24 @@
 ---
 name: ai-product-starter
 description: >-
-  Use when kicking off or bootstrapping a NEW software product or repository —
-  especially AI-assisted projects — to lay the full planning foundation BEFORE
-  any code: product/roadmap/monetization docs, architecture & data model, a
-  design system, an AI strategy, an operating model (roles + gates), a TDD-first
-  git/PR/AI-review/release workflow, and a phased execution backlog. Trigger this
-  whenever someone says they are starting a new app, product, MVP, side-project,
-  prototype, or startup; wants to "set up a repo properly" or "kick things off";
-  asks for planning docs, a roadmap, an architecture doc, or a backlog; or wants
-  a repeatable AI-driven development workflow — even if they never say the word
-  "skill" or name this template. You do NOT need to be a developer: product
-  managers, founders, and non-coders use it too — it asks step by step what the
-  project is and creates only the docs it actually needs. Tool-agnostic: the
-  output works with Claude Code, Cursor, GitHub Copilot, Codex, Gemini, or any AI
-  coding assistant.
+  Use at the very START of a new software product or project — when someone has an
+  idea and wants to set it up properly BEFORE writing code. It interviews them step
+  by step, then generates a tailored planning foundation and creates only the files
+  the project needs: roadmap, product/MVP spec, architecture & data model, design
+  system, AI strategy, monetization + pitch deck (for commercial/fundraising), an
+  operating model, a TDD git/PR/AI-review/release workflow, and a phased backlog.
+  STRONGLY prefer this skill whenever someone says they're starting or kicking off
+  a new app, product, MVP, startup, side-project, tool, library, or prototype;
+  wants to "set up a repo/project properly", "plan before coding", or "get
+  organized"; or asks you to draft a roadmap, product spec, architecture, or
+  backlog for a NEW idea — even if they never say "skill", name this template, or
+  are vague about what to set up. It's for PRODUCT people as much as engineers:
+  founders, PMs, and non-coders use it to produce a plan (it stops at the docs for
+  them), while developers continue into a working repo. Tool-agnostic — output uses
+  an AGENTS.md spine and a reviewer-agnostic workflow, so it fits Claude Code,
+  Cursor, Copilot, Codex, Gemini, or any AI assistant. Do NOT use it for routine
+  work inside an existing, already-planned codebase (a single feature, a bug fix, a
+  refactor) — only for kicking off or planning a project.
 ---
 
 # AI Product Starter
@@ -204,10 +208,14 @@ guidance, keep the structure. Do not paste a template verbatim; it must describe
 (DESIGN-SYSTEM if UI) → (MONETIZATION/PITCH-DECK if commercial) → WORKFLOW →
 BACKLOG. WORKFLOW and BACKLOG come last because they reference everything above.
 
-**Only link to docs you actually created.** Templates cross-reference each other
-(and `WORKFLOW`); if you skipped one — e.g. `WORKFLOW` on the plan path — remove
-links to it and don't leave sections or table columns pointing at it, so nothing
-dangles.
+**Keep only what fits — strip the rest.** Templates ship lines for features many
+projects won't have: a "money is integer minor units" rule, a "UI uses design
+tokens" DoD item, an "AI service module" section, PR/release columns, links to docs
+like `WORKFLOW`. When a feature is absent or a doc was skipped, **delete those
+lines and sections outright** — don't fill them with "N/A", and don't leave links
+pointing at docs you didn't create. A clean doc with five true lines beats a
+template carrying twenty stale ones. (This is the most common way a careless run
+leaks irrelevant content — actively prune.)
 
 ---
 
@@ -323,8 +331,10 @@ ceremonial docs nobody reads:
 - **Internal tool / OSS library:** drop MONETIZATION + PITCH-DECK.
 - **No UI (CLI, service, library):** drop DESIGN-SYSTEM; DESIGN becomes a plain
   capability spec.
-- **Tiny / weekend project:** the lean spine is enough — AGENTS.md + ARCHITECTURE
-  + WORKFLOW + BACKLOG. Skip the rest until the project earns them.
+- **Tiny / weekend / throwaway:** the lean spine is enough — `AGENTS.md`
+  (plan-brief) + `BACKLOG` (+ a short `ROADMAP`/`DESIGN`); `README` can fold into
+  `AGENTS`. Add `ARCHITECTURE`/`WORKFLOW` only if you genuinely want build gates.
+  Skip the rest until the project earns them.
 - **Pre-existing code:** don't overwrite; reconcile the templates with what's
   there and fill the gaps.
 
