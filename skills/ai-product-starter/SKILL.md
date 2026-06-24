@@ -99,8 +99,9 @@ answer:
 2. **Who is it for, and what problem does it solve?** *(feeds ROADMAP + DESIGN)*
 3. **What's the edge** — why this wins where alternatives don't? Push past "better
    UX" to a concrete, defensible reason. *(feeds ROADMAP)*
-4. **Will it make money / is it a business?** If so, **raising funding?**
-   *(makes money → MONETIZATION · funding → PITCH-DECK)*
+4. **Will it make money / is it a business?** And are you **actively raising
+   funding now?** *(makes money → MONETIZATION · raising now → PITCH-DECK · "might
+   raise later" → defer the deck, just note the trigger)*
 5. **Does it have a UI** — screens people look at and tap — or does it run headless
    (CLI, API, automation, library)? *(UI → DESIGN-SYSTEM)*
 6. **Does it store data or have user accounts?** *(yes → DATABASE)*
@@ -121,14 +122,13 @@ code fails.
 | If… | Create |
 |---|---|
 | **Always** | `AGENTS.md` (build brief) · `README.md` · `docs/ROADMAP` · `docs/DESIGN` · `docs/BACKLOG` |
-| **Building it now** (not just planning) | + `docs/WORKFLOW` (git/TDD/review) · `.github/` PR template + AI-review · repo bootstrap |
-| There will be code | + `docs/ARCHITECTURE` |
+| **Building it now** (not just planning) | + `docs/WORKFLOW` (git/TDD/review) · `docs/ARCHITECTURE` · `.github/` PR template + AI-review · repo bootstrap |
 | Has a UI | + `docs/DESIGN-SYSTEM` |
-| Stores data / has accounts | + `docs/DATABASE` |
+| Stores data / has accounts | + `docs/DATABASE` *(plan path: a short plain-language list of what's stored, not a full schema)* |
 | Has AI features | + `docs/AI` |
 | Makes money | + `docs/MONETIZATION` |
-| Raising funding | + `docs/PITCH-DECK` |
-| Quick experiment | trim to the lean spine: `AGENTS` + `WORKFLOW` + `BACKLOG` (+ `ROADMAP`/`DESIGN` if useful) |
+| Raising funding **now** | + `docs/PITCH-DECK` *(only if actively raising; "maybe later" → skip, note the trigger)* |
+| Quick experiment | trim to the lean spine: `AGENTS` + `BACKLOG` (+ `ROADMAP`/`DESIGN`); add the build path only if you want git/test gates |
 
 **Then confirm before writing anything.** Show the proposed file list with a
 one-line reason for each and ask: "this is what I'll create — add or drop any?"
@@ -184,8 +184,9 @@ Work through four things — for each, offer a draft first, then refine:
   subscriptions) and **one-time** costs as ranges, with the assumptions behind them
   (expected scale). Flag where **AI usage is the swing cost** and how to keep it
   down. For commercial projects extend to unit economics / COGS / a rough runway →
-  MONETIZATION. For non-commercial, still capture a short **"Tools & running
-  costs"** estimate (in ARCHITECTURE) — people underestimate it.
+  MONETIZATION (the running-cost table lives there). For non-commercial, capture a
+  short **"Tools & running costs"** note in ROADMAP — people underestimate it. Keep
+  it in **one** place; don't duplicate the cost table across docs.
 
 Summarize it back compactly — *features → phases/timeline → tools → monthly +
 one-time cost range* — and get a thumbs-up. This summary becomes the backbone of
@@ -200,6 +201,11 @@ guidance, keep the structure. Do not paste a template verbatim; it must describe
 *this* product. Order: ROADMAP → DESIGN → ARCHITECTURE → DATABASE → AI →
 (DESIGN-SYSTEM if UI) → (MONETIZATION/PITCH-DECK if commercial) → WORKFLOW →
 BACKLOG. WORKFLOW and BACKLOG come last because they reference everything above.
+
+**Only link to docs you actually created.** Templates cross-reference each other
+(and `WORKFLOW`); if you skipped one — e.g. `WORKFLOW` on the plan path — remove
+links to it and don't leave sections or table columns pointing at it, so nothing
+dangles.
 
 ---
 
@@ -218,11 +224,16 @@ The deliverable *is* the docs — a coherent plan someone can act on. Make them 
 together (README ties them; ROADMAP and BACKLOG agree on what ships when), and add
 one bridge artifact so the build can start later without you in the room:
 
-- a short **`AGENTS.md`** (or a README section) — the "build brief": a paragraph on
-  the product plus the operating model in miniature (PO + AI/dev implementer +
-  human-merge gate), so whoever builds it inherits how the work should run;
+- a short **`AGENTS.md`** build brief — use the
+  **`assets/templates/AGENTS.plan-brief.md`** template (NOT the full `AGENTS.md`,
+  which carries the dev workflow): one paragraph on the product plus the operating
+  model in miniature (PO + builder + human go-live gate), so whoever builds it
+  inherits how the work should run;
 - the **BACKLOG** as a feature/milestone plan — the PR/release-tracking columns
-  stay blank until building starts.
+  stay blank until building starts;
+- **strip the dev-only cross-links** the templates carry — references to
+  `WORKFLOW`, branches, and PR columns belong to the build path; remove them so the
+  plan reads clean and points only at docs you created.
 
 Then stop and offer the next move: *"When you're ready to build, come back and I'll
 set up the repo, the dev workflow, and the first tickets — or hand `AGENTS.md` +
