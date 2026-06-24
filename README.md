@@ -25,28 +25,32 @@ not a toy template.
 
 ## What it generates
 
-For your new repo:
+It adapts to who you are. **A product person gets a plan; a developer also gets a
+working repo** — you're not forced through engineering machinery if you're not
+coding.
 
-- **`AGENTS.md`** — the source-of-truth driving file (read by most AI tools), plus
-  a thin `CLAUDE.md` pointer. No lock-in to one assistant.
-- **`docs/`** — `ROADMAP`, `DESIGN`, `ARCHITECTURE`, `DATABASE`, `AI`, `WORKFLOW`,
-  `BACKLOG`, plus `DESIGN-SYSTEM` (UI projects) and `MONETIZATION` + `PITCH-DECK`
-  (commercial/fundraising). Each is adapted to *your* product, not boilerplate.
-- **An operating model** — Product Owner (you) + AI orchestrator/QA + specialist
-  implementers, with clear gates: the AI doesn't merge or release; humans do.
-- **A git/PR/review/release workflow** — feature → staging → production, semver,
-  test-first, and **independent AI code review with no self-review** (works with
-  Claude, Copilot, or Codex — your choice).
-- **A phased execution backlog** — ticket tables that double as release tracking,
-  so "what's next" is always written down.
+**For anyone — the plan (product, founders, PMs):**
 
-It scales to the project: a weekend CLI gets the lean spine; a startup gets the
-full suite. It prunes what doesn't fit.
+- **`docs/`** product docs — `ROADMAP`, `DESIGN`, plus `MONETIZATION` + `PITCH-DECK`
+  for commercial/fundraising and `DESIGN-SYSTEM` for products with a UI. Each
+  adapted to *your* product, not boilerplate.
+- **A phased backlog** (`BACKLOG`) — what to build, in what order; doubles as a
+  feature/milestone plan.
+- **A short build brief** (`AGENTS.md`) you can hand to a developer or an AI later.
+
+**When you're building it — the repo (developers):** it also lays down the
+technical docs (`ARCHITECTURE`, `DATABASE`, `AI`), an **operating model** (Product
+Owner + AI orchestrator/QA + implementers; the AI doesn't merge or release —
+humans do), a **git/PR/review/release workflow** (feature → staging → production,
+semver, test-first, independent AI review with no self-review — Claude, Copilot,
+or Codex), and bootstraps the repo.
+
+It scales and prunes: a non-technical founder stops at a clean plan, a weekend CLI
+gets the lean spine, a startup building now gets the full suite.
 
 ## Install
 
-This is packaged like [Superpowers](https://github.com/obra/superpowers) —
-per-tool plugin manifests so it installs natively in several agents.
+Per-tool plugin manifests, so it installs natively in several coding agents.
 
 ### Claude Code
 
