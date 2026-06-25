@@ -35,6 +35,52 @@ full set. Anything that doesn't fit your project is simply left out.
 - **Developers** — keep going past the plan into a ready-to-code repo (see
   [For developers](#for-developers)).
 
+## Example output
+
+What actually lands in your project — adapted to who you are and what you build.
+
+**A founder planning a commercial app with a UI** — *plan path*, stops at the docs:
+
+```text
+my-barber-app/
+├── AGENTS.md             # short brief to hand a developer or AI later
+├── README.md
+└── docs/
+    ├── ROADMAP.md        # phases + what ships when
+    ├── DESIGN.md         # features as plain "a user can…" stories
+    ├── DESIGN-SYSTEM.md  # look & feel (it has a UI)
+    ├── DATABASE.md       # plain-language: what gets stored
+    ├── MONETIZATION.md   # pricing + a running-cost estimate
+    └── BACKLOG.md        # the feature / milestone plan
+```
+
+No git, no tests, no CI — nothing to maintain. Hand `AGENTS.md` + `BACKLOG.md` to a
+builder when you're ready.
+
+**A developer building a SaaS now** — *build path*, a ready-to-code repo:
+
+```text
+my-saas/                      # git repo, branches: main + staging
+├── AGENTS.md                 # operating model: you decide, the AI builds, humans merge
+├── CLAUDE.md                 # entry pointer
+├── README.md
+├── .gitignore
+├── .github/
+│   ├── pull_request_template.md
+│   └── workflows/claude.yml  # @claude review
+└── docs/
+    ├── ROADMAP.md
+    ├── DESIGN.md
+    ├── ARCHITECTURE.md       # stack + module boundaries
+    ├── DATABASE.md           # data model
+    ├── DESIGN-SYSTEM.md
+    ├── WORKFLOW.md           # git/PR/review/release + test-first
+    └── BACKLOG.md            # tickets with status tracking
+```
+
+Different project, different output: a CLI skips `DESIGN-SYSTEM`, an internal tool
+skips `MONETIZATION` + the pitch deck, a weekend hack gets just `AGENTS` + `BACKLOG`.
+
 ## Install
 
 Add it to your AI assistant once, then just talk about your idea.
