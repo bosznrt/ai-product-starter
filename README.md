@@ -1,5 +1,12 @@
 # AI Product Starter
 
+[![npm version](https://img.shields.io/npm/v/ai-product-starter?style=flat-square&logo=npm&label=npm&color=CB3837)](https://www.npmjs.com/package/ai-product-starter)
+[![npm downloads](https://img.shields.io/npm/dm/ai-product-starter?style=flat-square&color=4F46E5)](https://www.npmjs.com/package/ai-product-starter)
+[![license](https://img.shields.io/npm/l/ai-product-starter?style=flat-square&color=22C55E)](./LICENSE)
+[![node](https://img.shields.io/node/v/ai-product-starter?style=flat-square&logo=nodedotjs&logoColor=white&color=339933)](./package.json)
+[![GitHub stars](https://img.shields.io/github/stars/bosznrt/ai-product-starter?style=flat-square&logo=github&color=111315)](https://github.com/bosznrt/ai-product-starter)
+[![works with](https://img.shields.io/badge/works%20with-Claude%20%7C%20Cursor%20%7C%20Copilot%20%7C%20Codex%20%7C%20Gemini-4F46E5?style=flat-square)](#install)
+
 > Turn your idea into a real plan — **before anyone writes a line of code.**
 
 Got an idea for an app, a product, a tool, a startup? This gives your AI assistant
