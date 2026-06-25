@@ -39,18 +39,23 @@ full set. Anything that doesn't fit your project is simply left out.
 
 Add it to your AI assistant once, then just talk about your idea.
 
-**Any tool — via `npx`** (Cursor, Copilot, Gemini, Codex, Claude, …). Run this
-inside your project; it drops the skill in and wires the entry files your
-assistant reads, so it'll work whatever tool you use:
+**Any tool — install once, then run `init`** (Cursor, Copilot, Gemini, Codex,
+Claude, …). Either run it one-off with `npx`, or install the CLI globally first:
 
 ```bash
-npx github:bosznrt/ai-product-starter init   # works straight from GitHub
-# or, once it's published to npm:
-npx ai-product-starter init
+# one-off, no install:
+npx github:bosznrt/ai-product-starter init    # straight from GitHub (works today)
+npx ai-product-starter init                   # once it's published to npm
+
+# or install the command globally, then run it inside any project:
+npm install -g github:bosznrt/ai-product-starter   # or: npm i -g ai-product-starter (after npm publish)
+ai-product-starter init
 ```
 
-Add `--tool cursor|copilot|gemini|claude` to wire just one tool instead of all.
-Then tell your assistant to plan your project (see [Try it](#try-it)).
+`init` drops the skill into your project and wires the entry files your assistant
+reads, so it works whatever tool you use. Add `--tool cursor|copilot|gemini|claude`
+to wire just one. Then tell your assistant to plan your project (see
+[Try it](#try-it)).
 
 **Claude Code (plugin)**
 
@@ -73,10 +78,12 @@ Update it the same way you update any plugin for your assistant.
 /plugin install ai-product-starter@ai-product-starter
 ```
 
-**Installed via `npx`** — re-run the installer; it's safe to run again:
+**Installed via `npx` or globally** — re-run the installer; it's safe to run again:
 
 ```bash
-npx ai-product-starter@latest init   # or: npx github:bosznrt/ai-product-starter init
+npx ai-product-starter@latest init                 # or: npx github:bosznrt/ai-product-starter init
+# if you installed it globally:
+npm install -g ai-product-starter@latest && ai-product-starter init
 ```
 
 **Manual clone** — `git pull`, and your assistant picks up the new skill and
