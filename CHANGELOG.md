@@ -4,6 +4,25 @@ Notable changes to this project. The format loosely follows
 [Keep a Changelog](https://keepachangelog.com/); versions follow
 [SemVer](https://semver.org/).
 
+## [0.1.1] — 2026-06-25
+
+### Changed
+
+- Renamed the feature-spec doc `DESIGN.md` → **`SPEC.md`** so it's no longer
+  confused with `DESIGN-SYSTEM.md` (the UI contract).
+- `DATABASE` is now a build-path doc; on the plan path the key data/entities are
+  described in `SPEC` in plain language — non-coders don't get a separate
+  data-model doc.
+
+### Added
+
+- A README **"Example output"** section showing the actual file tree a founder
+  (plan path) vs a developer (build path) ends up with.
+
+### Docs
+
+- Cleaned up the install / updating instructions now that it's published on npm.
+
 ## [0.1.0] — 2026-06-25
 
 Initial release.

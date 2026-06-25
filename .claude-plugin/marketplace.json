@@ -9,7 +9,7 @@
     {
       "name": "ai-product-starter",
       "description": "A skill that bootstraps a new product repository before any code: planning docs (roadmap, design, architecture, data model, AI strategy, monetization), an operating model, a TDD git/PR/AI-review/release workflow, and a phased execution backlog. Tool-agnostic output (AGENTS.md-based).",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "source": "./",
       "author": {
         "name": "BoSz Narathip",

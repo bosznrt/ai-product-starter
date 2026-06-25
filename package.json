@@ -1,6 +1,6 @@
 {
   "name": "ai-product-starter",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Give your AI assistant the skill to plan a new project before coding — interview, roadmap, spec, timeline, budget, backlog. Works in any tool; installs via npx.",
   "bin": {
     "ai-product-starter": "bin/cli.js"

@@ -1,6 +1,6 @@
 {
   "name": "ai-product-starter",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Bootstrap a new AI-driven product repo before any code: planning docs, operating model, TDD git/PR/AI-review/release workflow, and a phased backlog.",
   "author": {
     "name": "BoSz Narathip",
