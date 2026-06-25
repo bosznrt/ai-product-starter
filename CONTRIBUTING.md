@@ -60,3 +60,14 @@ Then check the generated output has **no dangling links** and no leftover
 
 Fork → branch → make the change → open a PR describing **what** you changed and
 **why**. Small, focused PRs are easiest to review. Be kind and assume good intent.
+
+## Releasing (maintainers)
+
+- Bump `version` in `package.json` and the four plugin manifests
+  (`.claude-plugin/plugin.json`, `.claude-plugin/marketplace.json`,
+  `.cursor-plugin/plugin.json`, `.codex-plugin/plugin.json`), and add a
+  `CHANGELOG.md` entry.
+- Tag `vX.Y.Z` and push.
+- Publish to npm with `npm publish` (the package ships `bin/` + `skills/`). Until
+  it's published, `npx github:bosznrt/ai-product-starter init` runs straight from
+  the repo.

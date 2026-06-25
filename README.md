@@ -39,17 +39,27 @@ full set. Anything that doesn't fit your project is simply left out.
 
 Add it to your AI assistant once, then just talk about your idea.
 
-**Claude Code**
+**Any tool — via `npx`** (Cursor, Copilot, Gemini, Codex, Claude, …). Run this
+inside your project; it drops the skill in and wires the entry files your
+assistant reads, so it'll work whatever tool you use:
+
+```bash
+npx github:bosznrt/ai-product-starter init   # works straight from GitHub
+# or, once it's published to npm:
+npx ai-product-starter init
+```
+
+Add `--tool cursor|copilot|gemini|claude` to wire just one tool instead of all.
+Then tell your assistant to plan your project (see [Try it](#try-it)).
+
+**Claude Code (plugin)**
 
 ```bash
 /plugin marketplace add bosznrt/ai-product-starter
 /plugin install ai-product-starter@ai-product-starter
 ```
 
-**Cursor · Codex · Kimi · others** — point your assistant's plugin/skill setting
-at this repo (it ships a manifest for each).
-
-**Any AI tool** — clone the repo and tell your assistant: *"Read
+**Manual** — clone the repo and tell your assistant: *"Read
 `skills/ai-product-starter/SKILL.md` and use it to plan my new project."*
 
 ## Updating
@@ -63,8 +73,14 @@ Update it the same way you update any plugin for your assistant.
 /plugin install ai-product-starter@ai-product-starter
 ```
 
-**Any other tool** — pull the latest from this repo (e.g. `git pull`), and your
-assistant picks up the new skill and templates on the next run.
+**Installed via `npx`** — re-run the installer; it's safe to run again:
+
+```bash
+npx ai-product-starter@latest init   # or: npx github:bosznrt/ai-product-starter init
+```
+
+**Manual clone** — `git pull`, and your assistant picks up the new skill and
+templates on the next run.
 
 ## Try it
 

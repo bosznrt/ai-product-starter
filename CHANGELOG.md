@@ -23,4 +23,8 @@ Initial release.
   `.gitignore`, and an example AI-review workflow.
 - **Multi-tool plugin packaging** (Claude Code, Cursor, Codex) with an `AGENTS.md`
   spine and a reviewer-agnostic workflow, so it isn't locked to one AI assistant.
+- An **`npx` installer** (`npx ai-product-starter init`, or
+  `npx github:bosznrt/ai-product-starter init` before it's on npm) that copies the
+  skill into a project and wires the entry files for any tool — AGENTS.md, Claude,
+  Gemini, Copilot, Cursor.
 - User docs under [`docs/`](./docs/) and a [`CONTRIBUTING`](./CONTRIBUTING.md) guide.

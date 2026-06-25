@@ -1,0 +1,42 @@
+{
+  "name": "ai-product-starter",
+  "version": "0.1.0",
+  "description": "Give your AI assistant the skill to plan a new project before coding — interview, roadmap, spec, timeline, budget, backlog. Works in any tool; installs via npx.",
+  "bin": {
+    "ai-product-starter": "bin/cli.js"
+  },
+  "files": [
+    "bin/",
+    "skills/",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "ai",
+    "skill",
+    "planning",
+    "roadmap",
+    "backlog",
+    "kickoff",
+    "scaffold",
+    "product",
+    "cursor",
+    "copilot",
+    "gemini",
+    "codex",
+    "claude"
+  ],
+  "license": "MIT",
+  "author": "BoSz Narathip",
+  "homepage": "https://github.com/bosznrt/ai-product-starter#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bosznrt/ai-product-starter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bosznrt/ai-product-starter/issues"
+  },
+  "engines": {
+    "node": ">=16.7"
+  }
+}
