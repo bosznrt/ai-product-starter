@@ -44,11 +44,10 @@ Claude, …). Either run it one-off with `npx`, or install the CLI globally firs
 
 ```bash
 # one-off, no install:
-npx github:bosznrt/ai-product-starter init    # straight from GitHub (works today)
-npx ai-product-starter init                   # once it's published to npm
+npx ai-product-starter init
 
-# or install the command globally, then run it inside any project:
-npm install -g github:bosznrt/ai-product-starter   # or: npm i -g ai-product-starter (after npm publish)
+# or install the CLI globally, then run it in any project:
+npm install -g ai-product-starter
 ai-product-starter init
 ```
 
@@ -81,7 +80,7 @@ Update it the same way you update any plugin for your assistant.
 **Installed via `npx` or globally** — re-run the installer; it's safe to run again:
 
 ```bash
-npx ai-product-starter@latest init                 # or: npx github:bosznrt/ai-product-starter init
+npx ai-product-starter@latest init
 # if you installed it globally:
 npm install -g ai-product-starter@latest && ai-product-starter init
 ```

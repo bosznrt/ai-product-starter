@@ -68,6 +68,6 @@ Fork → branch → make the change → open a PR describing **what** you change
   `.cursor-plugin/plugin.json`, `.codex-plugin/plugin.json`), and add a
   `CHANGELOG.md` entry.
 - Tag `vX.Y.Z` and push.
-- Publish to npm with `npm publish` (the package ships `bin/` + `skills/`). Until
-  it's published, `npx github:bosznrt/ai-product-starter init` runs straight from
-  the repo.
+- Publish to npm with `npm publish` (the package ships `bin/` + `skills/`). To try
+  unreleased changes without publishing, `npx github:bosznrt/ai-product-starter init`
+  runs straight from the repo.
