@@ -31,12 +31,12 @@
 | [`docs/WORKFLOW.md`](./docs/WORKFLOW.md) | engineering process — roles, TDD, dispatch, git / PR / review / merge / release gates |
 | [`docs/BACKLOG.md`](./docs/BACKLOG.md) | execution backlog — ticket tables per phase + status / PR / release tracking |
 | [`docs/ARCHITECTURE.md`](./docs/ARCHITECTURE.md) | stack, module boundaries, data flow, conventions |
-| [`docs/DESIGN.md`](./docs/DESIGN.md) | product contract — user stories + acceptance criteria |
+| [`docs/SPEC.md`](./docs/SPEC.md) | product contract — user stories + acceptance criteria |
 | {{EXTRA_DOC}} | {{EXTRA_DOC_CONTENTS}} |
 
 > [`CLAUDE.md`](./CLAUDE.md) is a thin pointer to [`AGENTS.md`](./AGENTS.md) for Claude Code.
 
-**Where to start:** PO → `docs/DESIGN.md` · AI assistant / dev → `AGENTS.md` → `docs/ARCHITECTURE.md`
+**Where to start:** PO → `docs/SPEC.md` · AI assistant / dev → `AGENTS.md` → `docs/ARCHITECTURE.md`
 
 ## Getting started
 

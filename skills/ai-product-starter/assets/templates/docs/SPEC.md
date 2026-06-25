@@ -1,6 +1,6 @@
-<!-- TEMPLATE: DESIGN — adapt for {{PROJECT_NAME}}; replace placeholders + guidance, keep structure. Delete sections that don't fit your project. -->
+<!-- TEMPLATE: SPEC — adapt for {{PROJECT_NAME}}; replace placeholders + guidance, keep structure. Delete sections that don't fit your project. -->
 
-# DESIGN — {{PROJECT_NAME}} product design + MVP spec
+# SPEC — {{PROJECT_NAME}} product design + MVP spec
 
 <!-- guidance: This is the MVP contract — the WHAT, as user stories with acceptance criteria your AI assistant (Claude / Copilot / Codex) and reviewers can verify against. Keep it testable: every story needs an AC that's pass/fail. -->
 

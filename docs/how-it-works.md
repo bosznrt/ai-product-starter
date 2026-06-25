@@ -129,14 +129,14 @@ files like this:
 
 | If… | It creates |
 |---|---|
-| **Always** | `AGENTS.md` (build brief) · `README.md` · `docs/ROADMAP` · `docs/DESIGN` · `docs/BACKLOG` |
+| **Always** | `AGENTS.md` (build brief) · `README.md` · `docs/ROADMAP` · `docs/SPEC` · `docs/BACKLOG` |
 | **Building it now** (not just planning) | + `docs/WORKFLOW` (git/TDD/review) · `docs/ARCHITECTURE` · `.github/` PR template + AI-review · repo bootstrap |
 | Has a **UI** | + `docs/DESIGN-SYSTEM` |
 | **Stores data / has accounts** | + `docs/DATABASE` *(plan path: a short plain-language list of what's stored, not a full schema)* |
 | Has **AI features** (the product uses AI at runtime) | + `docs/AI` |
 | **Makes money** | + `docs/MONETIZATION` |
 | **Raising funding now** | + `docs/PITCH-DECK` *(only if actively raising; "maybe later" → skip, note the trigger)* |
-| **Quick experiment** | trim to the lean spine: `AGENTS` + `BACKLOG` (+ `ROADMAP`/`DESIGN`); add the build path only if you want git/test gates |
+| **Quick experiment** | trim to the lean spine: `AGENTS` + `BACKLOG` (+ `ROADMAP`/`SPEC`); add the build path only if you want git/test gates |
 
 A few things worth knowing about the logic:
 

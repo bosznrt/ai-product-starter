@@ -13,7 +13,7 @@
 6. [Beyond Year 1](#6-beyond-year-1)
 7. [Risks & dependencies](#7-risks--dependencies)
 
-> Revenue plan: [`MONETIZATION.md`](./MONETIZATION.md) · MVP spec: [`DESIGN.md`](./DESIGN.md)
+> Revenue plan: [`MONETIZATION.md`](./MONETIZATION.md) · MVP spec: [`SPEC.md`](./SPEC.md)
 
 ---
 

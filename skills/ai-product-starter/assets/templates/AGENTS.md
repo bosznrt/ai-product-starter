@@ -61,7 +61,7 @@ Keep changes reviewable by a non-coding PO: small, well-scoped commits with plai
 | [`docs/WORKFLOW.md`](./docs/WORKFLOW.md) | engineering process — roles, locked decisions, TDD, dispatch, PR/review/merge/release gates |
 | [`docs/BACKLOG.md`](./docs/BACKLOG.md) | execution backlog — ticket tables per phase + status/PR/release tracking |
 | [`docs/ARCHITECTURE.md`](./docs/ARCHITECTURE.md) | stack, module boundaries, data flow, conventions |
-| [`docs/DESIGN.md`](./docs/DESIGN.md) | product contract — user stories + acceptance criteria |
+| [`docs/SPEC.md`](./docs/SPEC.md) | product contract — user stories + acceptance criteria |
 | [`docs/AI.md`](./docs/AI.md) | AI strategy, behavior specs, model choices |
 | {{EXTRA_DOC}} | {{EXTRA_DOC_WHEN}} |
 

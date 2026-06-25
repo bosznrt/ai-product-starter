@@ -47,7 +47,7 @@ my-barber-app/
 ├── README.md
 └── docs/
     ├── ROADMAP.md        # phases + what ships when
-    ├── DESIGN.md         # features + the key things it tracks, in plain language
+    ├── SPEC.md           # features + the key things it tracks, in plain language
     ├── DESIGN-SYSTEM.md  # look & feel (it has a UI)
     ├── MONETIZATION.md   # pricing + a running-cost estimate
     └── BACKLOG.md        # the feature / milestone plan
@@ -69,7 +69,7 @@ my-saas/                      # git repo, branches: main + staging
 │   └── workflows/claude.yml  # @claude review
 └── docs/
     ├── ROADMAP.md
-    ├── DESIGN.md
+    ├── SPEC.md
     ├── ARCHITECTURE.md       # stack + module boundaries
     ├── DATABASE.md           # data model
     ├── DESIGN-SYSTEM.md

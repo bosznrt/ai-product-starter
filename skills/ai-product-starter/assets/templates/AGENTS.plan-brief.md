@@ -19,7 +19,7 @@ or an AI assistant. The full plan lives in [`docs/`](./docs/); start with
   goes to real users; the builder doesn't ship on its own.
 
 ## Where to start
-1. Read `docs/ROADMAP.md` and `docs/DESIGN.md` (the features as plain user stories).
+1. Read `docs/ROADMAP.md` and `docs/SPEC.md` (the features as plain user stories).
 2. Pick the top item in `docs/BACKLOG.md` and keep that file updated as the
    source of truth for "what's next."
 3. When building begins for real, set up the full dev workflow (branches, reviews,

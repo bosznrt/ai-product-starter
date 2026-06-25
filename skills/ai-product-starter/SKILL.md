@@ -69,7 +69,7 @@ template here; you do not have to run the whole flow.
     workflows/         # optional AI-review workflow (e.g. claude.yml) — see ai-review-integrations.md
   docs/
     ROADMAP.md         # phases, feature master list, per-phase success metrics
-    DESIGN.md          # MVP contract — user stories + acceptance criteria
+    SPEC.md            # MVP contract — user stories + acceptance criteria
     DESIGN-SYSTEM.md   # UI contract — tokens, components, wireframes (UI projects)
     ARCHITECTURE.md    # stack, module boundaries, data flow, conventions
     DATABASE.md        # data model, entities, enums, money/precision rules
@@ -100,7 +100,7 @@ no less.** Walk through these one question at a time, skipping any you can alrea
 answer:
 
 1. **What are you building?** One sentence; the single job of v1. *(always)*
-2. **Who is it for, and what problem does it solve?** *(feeds ROADMAP + DESIGN)*
+2. **Who is it for, and what problem does it solve?** *(feeds ROADMAP + SPEC)*
 3. **What's the edge** — why this wins where alternatives don't? Push past "better
    UX" to a concrete, defensible reason. *(feeds ROADMAP)*
 4. **Will it make money / is it a business?** And are you **actively raising
@@ -127,21 +127,21 @@ code fails.
 
 | If… | Create |
 |---|---|
-| **Always** | `AGENTS.md` (plan-brief on the plan path, full on the build path) · `README.md` · `docs/ROADMAP` · `docs/DESIGN` · `docs/BACKLOG` |
+| **Always** | `AGENTS.md` (plan-brief on the plan path, full on the build path) · `README.md` · `docs/ROADMAP` · `docs/SPEC` · `docs/BACKLOG` |
 | **Building it now** (not just planning) | + `docs/WORKFLOW` (git/TDD/review) · `docs/ARCHITECTURE` · `.github/` PR template + AI-review · repo bootstrap |
 | Has a UI | + `docs/DESIGN-SYSTEM` |
-| Stores data / has accounts | plan path → name the key data/entities inside `DESIGN` (plain language) · build path → a full `docs/DATABASE` |
+| Stores data / has accounts | plan path → name the key data/entities inside `SPEC` (plain language) · build path → a full `docs/DATABASE` |
 | Has AI features | + `docs/AI` |
 | Makes money | + `docs/MONETIZATION` |
 | Raising funding **now** | + `docs/PITCH-DECK` *(only if actively raising; "maybe later" → skip, note the trigger)* |
-| Quick experiment | trim to the lean spine: `AGENTS` + `BACKLOG` (+ `ROADMAP`/`DESIGN`); add the build path only if you want git/test gates |
+| Quick experiment | trim to the lean spine: `AGENTS` + `BACKLOG` (+ `ROADMAP`/`SPEC`); add the build path only if you want git/test gates |
 
 **Then confirm before writing anything.** Show the proposed file list with a
 one-line reason for each and ask: "this is what I'll create — add or drop any?"
 Creating files nobody needs is the main failure mode; this checkpoint prevents it.
 
 **Persona note — tailor depth to who's building:**
-- *Product owner / founder / non-coder:* lead with ROADMAP, DESIGN, and (if
+- *Product owner / founder / non-coder:* lead with ROADMAP, SPEC, and (if
   commercial) MONETIZATION / PITCH-DECK. Still create ARCHITECTURE / DATABASE / AI
   if relevant, but as **plain-language scaffolds with `TBD — for your developer/AI`
   placeholders**, not deep technical decisions. Never block them on a stack choice.
@@ -177,7 +177,7 @@ Work through four things — for each, offer a draft first, then refine:
 
 - **Features.** Draft the v1 feature set from the problem, split into *must-have
   for v1* vs *later*. "Based on this, a lean v1 is X, Y, Z; A and B can wait —
-  right?" → feeds ROADMAP's feature list, DESIGN's user stories, and the first
+  right?" → feeds ROADMAP's feature list, SPEC's user stories, and the first
   BACKLOG tickets. Apply YAGNI hard: a shorter v1 ships.
 - **Timeline.** Get a target (a weekend? a few weeks? months?), then translate it
   into **phases with rough durations** (e.g. "P1 core ~3 wks → P2 polish ~2 wks").
@@ -204,7 +204,7 @@ For each relevant doc, read the matching template in
 `assets/templates/docs/<NAME>.md`, then fill it for THIS product. Templates are
 skeletons with `{{PLACEHOLDERS}}` and inline `<!-- guidance -->` — replace the
 guidance, keep the structure. Do not paste a template verbatim; it must describe
-*this* product. Order: ROADMAP → DESIGN → ARCHITECTURE → DATABASE → AI →
+*this* product. Order: ROADMAP → SPEC → ARCHITECTURE → DATABASE → AI →
 (DESIGN-SYSTEM if UI) → (MONETIZATION/PITCH-DECK if commercial) → WORKFLOW →
 BACKLOG. WORKFLOW and BACKLOG come last because they reference everything above.
 
@@ -329,10 +329,10 @@ Full suite by default, but prune what does not fit — a smaller, honest set bea
 ceremonial docs nobody reads:
 
 - **Internal tool / OSS library:** drop MONETIZATION + PITCH-DECK.
-- **No UI (CLI, service, library):** drop DESIGN-SYSTEM; DESIGN becomes a plain
+- **No UI (CLI, service, library):** drop DESIGN-SYSTEM; SPEC becomes a plain
   capability spec.
 - **Tiny / weekend / throwaway:** the lean spine is enough — `AGENTS.md`
-  (plan-brief) + `BACKLOG` (+ a short `ROADMAP`/`DESIGN`); `README` can fold into
+  (plan-brief) + `BACKLOG` (+ a short `ROADMAP`/`SPEC`); `README` can fold into
   `AGENTS`. Add `ARCHITECTURE`/`WORKFLOW` only if you genuinely want build gates.
   Skip the rest until the project earns them.
 - **Some code already exists** (you're putting a plan around an early or partial

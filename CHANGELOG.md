@@ -17,7 +17,7 @@ Initial release.
   git/PR/review/release workflow, test-first, repo bootstrap) for developers.
 - A **"Scope the idea"** step that proposes and estimates features, a phased
   timeline, the tools/services needed, and a rough budget.
-- Doc templates: `ROADMAP`, `DESIGN`, `ARCHITECTURE`, `DATABASE`, `AI`,
+- Doc templates: `ROADMAP`, `SPEC`, `ARCHITECTURE`, `DATABASE`, `AI`,
   `DESIGN-SYSTEM`, `MONETIZATION`, `PITCH-DECK`, `WORKFLOW`, `BACKLOG`, plus
   `AGENTS.md` (full + plan-brief), `CLAUDE.md`, a README, a PR template, a
   `.gitignore`, and an example AI-review workflow.
