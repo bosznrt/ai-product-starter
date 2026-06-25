@@ -127,7 +127,7 @@ code fails.
 
 | If… | Create |
 |---|---|
-| **Always** | `AGENTS.md` (build brief) · `README.md` · `docs/ROADMAP` · `docs/DESIGN` · `docs/BACKLOG` |
+| **Always** | `AGENTS.md` (plan-brief on the plan path, full on the build path) · `README.md` · `docs/ROADMAP` · `docs/DESIGN` · `docs/BACKLOG` |
 | **Building it now** (not just planning) | + `docs/WORKFLOW` (git/TDD/review) · `docs/ARCHITECTURE` · `.github/` PR template + AI-review · repo bootstrap |
 | Has a UI | + `docs/DESIGN-SYSTEM` |
 | Stores data / has accounts | + `docs/DATABASE` *(plan path: a short plain-language list of what's stored, not a full schema)* |
@@ -335,8 +335,10 @@ ceremonial docs nobody reads:
   (plan-brief) + `BACKLOG` (+ a short `ROADMAP`/`DESIGN`); `README` can fold into
   `AGENTS`. Add `ARCHITECTURE`/`WORKFLOW` only if you genuinely want build gates.
   Skip the rest until the project earns them.
-- **Pre-existing code:** don't overwrite; reconcile the templates with what's
-  there and fill the gaps.
+- **Some code already exists** (you're putting a plan around an early or partial
+  project): don't overwrite — reconcile the templates with what's there and fill
+  the gaps. This skill is for *planning / kicking off*, not for routine changes to
+  a mature, already-planned codebase.
 
 Say what you are including and why, so the scope is a choice, not an accident.
 

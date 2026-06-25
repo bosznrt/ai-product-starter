@@ -52,6 +52,20 @@ at this repo (it ships a manifest for each).
 **Any AI tool** — clone the repo and tell your assistant: *"Read
 `skills/ai-product-starter/SKILL.md` and use it to plan my new project."*
 
+## Updating
+
+Update it the same way you update any plugin for your assistant.
+
+**Claude Code**
+
+```bash
+/plugin marketplace update ai-product-starter
+/plugin install ai-product-starter@ai-product-starter
+```
+
+**Any other tool** — pull the latest from this repo (e.g. `git pull`), and your
+assistant picks up the new skill and templates on the next run.
+
 ## Try it
 
 Once it's installed, just say what you're dreaming up:
@@ -78,6 +92,21 @@ Building it now? It doesn't stop at docs — it also sets up:
 It's **tool-agnostic**: generated repos use an `AGENTS.md` as the source of truth
 (most AI coding tools read it) and keep the review/workflow vendor-neutral, so you
 can use any assistant — or several.
+
+## Docs
+
+[`docs/`](./docs/) has the full guides:
+
+- [Getting started](./docs/getting-started.md) — install and your first run.
+- [How it works](./docs/how-it-works.md) — the interview, the two finish lines, and
+  how it chooses files.
+- [Customizing](./docs/customizing.md) — tailor the templates and the workflow.
+- [FAQ](./docs/faq.md).
+
+## Contributing
+
+Issues and PRs welcome — improve the skill, the templates, the docs, or add support
+for another AI tool. See [`CONTRIBUTING.md`](./CONTRIBUTING.md).
 
 ## License
 
