@@ -47,9 +47,8 @@ my-barber-app/
 ├── README.md
 └── docs/
     ├── ROADMAP.md        # phases + what ships when
-    ├── DESIGN.md         # features as plain "a user can…" stories
+    ├── DESIGN.md         # features + the key things it tracks, in plain language
     ├── DESIGN-SYSTEM.md  # look & feel (it has a UI)
-    ├── DATABASE.md       # plain-language: what gets stored
     ├── MONETIZATION.md   # pricing + a running-cost estimate
     └── BACKLOG.md        # the feature / milestone plan
 ```

@@ -130,7 +130,7 @@ code fails.
 | **Always** | `AGENTS.md` (plan-brief on the plan path, full on the build path) · `README.md` · `docs/ROADMAP` · `docs/DESIGN` · `docs/BACKLOG` |
 | **Building it now** (not just planning) | + `docs/WORKFLOW` (git/TDD/review) · `docs/ARCHITECTURE` · `.github/` PR template + AI-review · repo bootstrap |
 | Has a UI | + `docs/DESIGN-SYSTEM` |
-| Stores data / has accounts | + `docs/DATABASE` *(plan path: a short plain-language list of what's stored, not a full schema)* |
+| Stores data / has accounts | plan path → name the key data/entities inside `DESIGN` (plain language) · build path → a full `docs/DATABASE` |
 | Has AI features | + `docs/AI` |
 | Makes money | + `docs/MONETIZATION` |
 | Raising funding **now** | + `docs/PITCH-DECK` *(only if actively raising; "maybe later" → skip, note the trigger)* |
